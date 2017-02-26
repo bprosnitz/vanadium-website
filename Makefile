@@ -1,6 +1,6 @@
 SHELL := /bin/bash -euo pipefail
 PATH := node_modules/.bin:$(PATH)
-MDRIP ?= $(JIRI_ROOT)/third_party/go/bin/mdrip
+MDRIP ?= /tmp/gopath/go/bin/mdrip
 
 .DELETE_ON_ERROR:
 .DEFAULT_GOAL := all
@@ -45,7 +45,7 @@ NPM_DIR := $(shell mktemp -d "/tmp/XXXXXX")
 export PATH := $(NPM_DIR):$(NODE_DIR)/bin:$(PATH)
 
 # SEE: https://www.gnu.org/software/make/manual/html_node/Chained-Rules.html
-npm = $(NPM_DIR)/npm
+npm = /usr/local/bin/npm
 .INTERMEDIATE: $(npm)
 $(npm):
 	echo 'node $(NODE_DIR)/bin/npm "$$@"' > $(npm)
@@ -56,7 +56,7 @@ $(npm):
 # capable of running the extracted code in a subshell, simulating a user
 # stepping through the tutorials in a step by step fashion.
 $(MDRIP):
-	jiri go install github.com/monopole/mdrip
+	go install github.com/monopole/mdrip
 
 #############################################################################
 # Variables, functions, and helpers
@@ -180,7 +180,7 @@ public/css/bundle.css: $(shell find stylesheets/*) node_modules
 public/js/bundle.js: browser/index.js $(shell find browser) node_modules
 	$(call BROWSERIFY,$<,$@)
 
-build: $(bundles) $(scripts) $(haiku_inputs) node_modules | $(MDRIP)
+build: $(bundles) $(scripts) $(haiku_inputs) node_modules 
 	haiku build --helpers helpers.js --build-dir $@
 	@touch $@
 
@@ -250,7 +250,7 @@ $(scenario)-a-setup.sh: \
 depsHello = $(depsCommon) content/$(tutHello).md
 .PHONY: test-hello-world
 test-hello-world: $(depsHello) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(completer)-hello-world.sh: $(depsHello) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -258,7 +258,7 @@ $(completer)-hello-world.sh: $(depsHello) | $(MDRIP)
 depsBasics = $(depsCommon) content/$(tutBasics).md
 .PHONY: test-basics
 test-basics: $(depsBasics) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(completer)-basics.sh: $(depsBasics) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -268,7 +268,7 @@ $(scenario)-b-setup.sh: $(completer)-basics.sh
 depsPrincipals = $(depsBasics) content/$(tutPrincipals).md
 .PHONY: test-principals
 test-principals: $(depsPrincipals) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(scenario)-c-setup.sh: $(depsPrincipals) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -276,7 +276,7 @@ $(scenario)-c-setup.sh: $(depsPrincipals) | $(MDRIP)
 depsPermsAuth = $(depsPrincipals) content/$(tutPermsAuth).md
 .PHONY: test-permissions-authorizer
 test-permissions-authorizer: $(depsPermsAuth) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(completer)-permissions-authorizer.sh: $(depsPermsAuth) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -286,7 +286,7 @@ $(scenario)-d-setup.sh: $(completer)-permissions-authorizer.sh
 depsMultiDisp = $(depsPermsAuth) content/$(tutSuffixPart1).md
 .PHONY: test-multiservice-dispatcher
 test-multiservice-dispatcher: $(depsMultiDisp) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(completer)-multiservice-dispatcher.sh: $(depsMultiDisp) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -296,22 +296,22 @@ $(scenario)-f-setup.sh: $(completer)-multiservice-dispatcher.sh
 depsCaveats1st = $(depsPermsAuth) content/$(tutCaveats1st).md
 .PHONY: test-caveats-1st
 test-caveats-1st: $(depsCaveats1st) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 
 depsCaveats3rd = $(depsPermsAuth) content/$(tutCaveats3rd).md
 .PHONY: test-caveats-3rd
 test-caveats-3rd: $(depsCaveats3rd) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 
 depsAgent = $(depsPermsAuth) content/$(tutAgent).md
 .PHONY: test-agent
 test-agent: $(depsAgent) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 
 depsCustomAuth = $(depsPermsAuth) content/$(tutCustomAuth).md
 .PHONY: test-custom-auth
 test-custom-auth: $(depsCustomAuth) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(completer)-custom-authorizer.sh: $(depsCustomAuth) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -319,17 +319,17 @@ $(completer)-custom-authorizer.sh: $(depsCustomAuth) | $(MDRIP)
 depsMountTable = $(depsBasics) content/$(tutMountTable).md
 .PHONY: test-mount-table
 test-mount-table: $(depsMountTable) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 
 depsNamespace = $(depsBasics) content/$(tutNamespace).md
 .PHONY: test-namespace
 test-namespace: $(depsNamespace) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 
 depsSuffixPart1 = $(depsBasics) content/$(tutSuffixPart1).md
 .PHONY: test-suffix-part1
 test-suffix-part1: $(depsSuffixPart1) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(completer)-suffix-part1.sh: $(depsSuffixPart1) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -337,7 +337,7 @@ $(completer)-suffix-part1.sh: $(depsSuffixPart1) | $(MDRIP)
 depsSuffixPart2 = $(depsMultiDisp) content/$(tutSuffixPart2).md
 .PHONY: test-suffix-part2
 test-suffix-part2: $(depsSuffixPart2) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP) test $^
 $(completer)-suffix-part2.sh: $(depsSuffixPart2) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -345,7 +345,7 @@ $(completer)-suffix-part2.sh: $(depsSuffixPart2) | $(MDRIP)
 depsGlobber = $(depsMultiDisp) content/$(tutGlobber).md
 .PHONY: test-globber
 test-globber: $(depsGlobber) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP)  test $^
 $(completer)-globber.sh: $(depsGlobber) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -353,7 +353,7 @@ $(completer)-globber.sh: $(depsGlobber) | $(MDRIP)
 depsJsHello = $(depsBasics) content/$(tutJSHello).md
 .PHONY: test-js-hello
 test-js-hellopeer: $(depsJsHello) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP)  test $^
 $(completer)-js-hellopeer.sh: $(depsJsHello) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -363,7 +363,7 @@ $(scenario)-e-setup.sh: $(completer)-js-hellopeer.sh
 depsJsFortune = $(depsBasics) content/$(tutJSFortune).md
 .PHONY: test-js-fortune
 test-js-fortune: $(depsJsFortune) | $(MDRIP)
-	$(MDRIP) --subshell test $^
+	$(MDRIP)  test $^
 $(completer)-js-fortune.sh: $(depsJsFortune) | $(MDRIP)
 	mkdir -p $(@D)
 	$(MDRIP) --preambled 0 completer $^ > $@
@@ -429,14 +429,14 @@ test-site: build node_modules
 # JIRI_ROOT.
 .PHONY: test-tutorials-core
 test-tutorials-core: build
-	jiri go install v.io/v23/... v.io/x/ref/...
-	$(MDRIP) --subshell --blockTimeOut 1m test content/testing.md $(depsOneBigCoreTutorialTest)
+	#jiri go install v.io/v23/... v.io/x/ref/...
+	$(MDRIP) --blockTimeOut 1m test content/testing.md $(depsOneBigCoreTutorialTest)
 
 
 # Test Java tutorials.
 .PHONY: test-tutorials-java
 test-tutorials-java: build
-	$(MDRIP) --blockTimeOut 5m --subshell test $(depsOneBigJavaTutorialTest)
+	$(MDRIP) --blockTimeOut 5m test $(depsOneBigJavaTutorialTest)
 
 # Test JS tutorials against an existing development install.
 #
@@ -453,8 +453,8 @@ test-tutorials-java: build
 # JIRI_ROOT.
 .PHONY: test-tutorials-js-node
 test-tutorials-js-node: build
-	jiri go install v.io/v23/... v.io/x/ref/...
-	$(MDRIP) --blockTimeOut 2m --subshell test content/testing.md $(depsOneBigJsTutorialTest)
+	#jiri go install v.io/v23/... v.io/x/ref/...
+	$(MDRIP) --blockTimeOut 2m test content/testing.md $(depsOneBigJsTutorialTest)
 
 # Test JS tutorials (web version) against an existing development install.
 #
@@ -478,8 +478,8 @@ test-tutorials-js-node: build
 # integration testing, and will likely be decommissioned soon.
 .PHONY: test-tutorials-js-web
 test-tutorials-js-web: build
-	jiri go install v.io/v23/... v.io/x/ref/...
-	$(MDRIP) --subshell --blockTimeOut 3m testui content/testing.md $(depsOneBigJsTutorialTest)
+	#jiri go install v.io/v23/... v.io/x/ref/...
+	$(MDRIP) --blockTimeOut 3m testui content/testing.md $(depsOneBigJsTutorialTest)
 
 # Test tutorials against fresh external install.
 #
@@ -490,7 +490,7 @@ test-tutorials-js-web: build
 # site.
 .PHONY: test-tutorials-external
 test-tutorials-external: build
-	$(MDRIP) --subshell --blockTimeOut 10m test content/$(install_md) $(depsOneBigCoreTutorialTest)
+	$(MDRIP) --blockTimeOut 10m test content/$(install_md) $(depsOneBigCoreTutorialTest)
 
 # Test tutorials without install. Assumes JIRI_ROOT and V23_RELEASE are defined.
 #
@@ -499,7 +499,7 @@ test-tutorials-external: build
 # happy with your installation and are just debugging tutorial code.
 .PHONY: test-tutorials-no-install
 test-tutorials-no-install: build
-	$(MDRIP) --subshell test $(depsOneBigCoreTutorialTest)
+	$(MDRIP) test $(depsOneBigCoreTutorialTest)
 
 # The files needed to build JS tutorial output.
 depsJSTutorialResults = \
@@ -517,6 +517,6 @@ depsJSTutorialResults = \
 # The "jiri go install" line below ensures all required tools (e.g. vdl) are
 # installed.
 $(jsTutorialResults): $(depsJSTutorialResults) | $(MDRIP)
-	jiri go install v.io/v23/... v.io/x/ref/...
-	V_TUT=$(abspath $@) $(MDRIP) --subshell --blockTimeOut 1m buildjs $^
+	#jiri go install v.io/v23/... v.io/x/ref/...
+	V_TUT=$(abspath $@) $(MDRIP) --blockTimeOut 1m buildjs $^
 	rm -rf $(abspath $@)/node_modules
