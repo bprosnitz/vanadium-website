@@ -294,9 +294,9 @@ unset V23_NAMESPACE
   * Services that can have children in the namespace need to implement
     the `GlobChildren__` method.
 
-[Part I]: /tutorials/naming/suffix-part1.html
-[Part II]: /tutorials/naming/suffix-part2.html
-[The suffix - Part I]: /tutorials/naming/suffix-part1.html
+[Part I]: /vanadium-website/build/naming/suffix-part1.html
+[Part II]: /vanadium-website/build/naming/suffix-part2.html
+[The suffix - Part I]: /vanadium-website/build/naming/suffix-part1.html
 [VDL]: /glossary.html#vanadium-definition-language-vdl-
 [rpc/model.go]: https://vanadium.googlesource.com/release.go.v23/+/master/rpc/model.go
 [static type-checking]: https://en.wikipedia.org/wiki/Type_system#Type_checking

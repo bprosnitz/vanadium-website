@@ -475,12 +475,12 @@ That expiration was set using the `--for` flag in the `bless` command
 
 Caveats will be discussed in more depth in the [caveats tutorial].
 
-[basics tutorial]: /tutorials/basics.html
+[basics tutorial]: /vanadium-website/build/basics.html
 [blessing name]: /glossary.html#blessing-name
 [blessing root]: /glossary.html#blessing-root
 [blessing]: /glossary.html#blessing
 [caveat]: /glossary.html#caveat
-[caveats tutorial]: /tutorials/security/first-party-caveats.html
+[caveats tutorial]: /vanadium-website/build/security/first-party-caveats.html
 [certificate]: /glossary.html#certificate
 [key pair]: http://en.wikipedia.org/wiki/Public-key_cryptography
 [patterns]: /glossary.html#blessing-pattern

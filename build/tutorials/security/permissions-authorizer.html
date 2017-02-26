@@ -171,13 +171,13 @@ If you would like to generate files from this tutorial without the copy/paste st
 </div>
 
       <h1 id="permissions-policy">Permissions policy</h1>
-<p>In addition to the <a href="/tutorials/security/principals-and-blessings.html#default-authorization-policy">default authorization policy</a>, Vanadium
+<p>In addition to the <a href="/vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy">default authorization policy</a>, Vanadium
 offers another built-in authorization policy based on the commonly used idea of
 a permissions map.  Such an authorizer allows a wide range of policies
 controllable via editing lists that are given to a server as flags - no need to
 modify code.</p>
 <div class="note info"><p>Vanadium also supports the use of a completely custom policy - the
-procedure for building one is covered in the <a href="/tutorials/security/custom-authorizer.html">custom authorizer
+procedure for building one is covered in the <a href="/vanadium-website/build/security/custom-authorizer.html">custom authorizer
 tutorial</a>.</p>
 </div>
 
@@ -268,7 +268,7 @@ not by the name <code>bob</code> or <code>alice:colleague</code> or prefixes of 
 <code>alice</code>.  On the other hand, the pattern <code>alice:houseguest:$</code> would be matched
 exactly by the name <code>alice:houseguest</code>.</p>
 <h2 id="impact-on-bob-and-carol">Impact on Bob and Carol</h2>
-<p>You can quickly confirm that Bob (already <a href="/tutorials/security/principals-and-blessings.html#blessings">blessed as a
+<p>You can quickly confirm that Bob (already <a href="/vanadium-website/build/security/principals-and-blessings.html#blessings">blessed as a
 <code>friend</code></a>) can read:</p>
 <!-- @bobCanRead @test -->
 <pre><code>$V_TUT/bin/client \

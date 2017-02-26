@@ -326,11 +326,11 @@ unset V23_CREDENTIALS
 * Namespace cycles are allowed and controlled by counting.
 
 [naming concepts document]: /concepts/naming.html
-[basics tutorial]: /tutorials/basics.html
-[credentials]: /tutorials/naming/mount-table.html#credentials
+[basics tutorial]: /vanadium-website/build/basics.html
+[credentials]: /vanadium-website/build/naming/mount-table.html#credentials
 [endpoint]: /glossary.html#endpoint
 [VDL]: /glossary.html#vanadium-definition-language-vdl-
-[vrpc]: /tutorials/basics.html#the-vrpc-client
-[security tutorials]: /tutorials/security/
-[agent tutorial]: /tutorials/security/agent.html
+[vrpc]: /vanadium-website/build/basics.html#the-vrpc-client
+[security tutorials]: /vanadium-website/build/security/
+[agent tutorial]: /vanadium-website/build/security/agent.html
 [mounttable interface]: https://vanadium.googlesource.com/release.go.v23/+/master/services/mounttable/service.vdl

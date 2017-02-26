@@ -460,10 +460,10 @@ unset V23_NAMESPACE
 * In Vanadium, authorization boils down to simple string comparisons.
   Supporting infrastructure assures the strings cannot be forged.
 
-[Part I]: /tutorials/naming/suffix-part1.html
-[default authorizer]: /tutorials/security/principals-and-blessings.html#default-authorization-policy
-[perform a blessing]: /tutorials/security/principals-and-blessings.html#blessings
-[Permissions authorizer]: /tutorials/security/permissions-authorizer.html
-[fortune VDL]: /tutorials/security/permissions-authorizer.html#permissions-policy
+[Part I]: /vanadium-website/build/naming/suffix-part1.html
+[default authorizer]: /vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy
+[perform a blessing]: /vanadium-website/build/security/principals-and-blessings.html#blessings
+[Permissions authorizer]: /vanadium-website/build/security/permissions-authorizer.html
+[fortune VDL]: /vanadium-website/build/security/permissions-authorizer.html#permissions-policy
 [authorizer interface]: https://godoc.org/v.io/v23/security#Authorizer
-[v23_namespace]: /tutorials/naming/mount-table.html#the-namespace-variable
+[v23_namespace]: /vanadium-website/build/naming/mount-table.html#the-namespace-variable

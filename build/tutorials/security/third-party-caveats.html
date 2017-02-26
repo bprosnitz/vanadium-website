@@ -173,7 +173,7 @@ This tutorial requires a <a href="https://accounts.google.com">Google account</a
 </div>
 
       <h1 id="introduction">Introduction</h1>
-<p>Earlier you <a href="/tutorials/security/first-party-caveats.html">learned</a> how to add <a href="/glossary.html#caveat">caveats</a> to a
+<p>Earlier you <a href="/vanadium-website/build/security/first-party-caveats.html">learned</a> how to add <a href="/glossary.html#caveat">caveats</a> to a
 <a href="/glossary.html#blessing">blessing</a> to restrict its validity.  For example, one can make a
 blessing expire after a few minutes, or restrict it to work only when
 accessing a particular <em>method</em> on a service. These conditions are
@@ -254,7 +254,7 @@ form has either directly authenticated with Google as
 <p>By default, this blessing comes with a <em>third-party caveat</em> that
 enables revocation.</p>
 <p>Report the caveat on this blessing using a command
-<a href="/tutorials/security/principals-and-blessings.html#caveats">introduced earlier</a>:</p>
+<a href="/vanadium-website/build/security/principals-and-blessings.html#caveats">introduced earlier</a>:</p>
 <!-- @getTheCaveat @test -->
 <pre><code>$V_BIN/principal \
     --v23.credentials $V_TUT/cred/$USER \
@@ -352,7 +352,7 @@ graph, excluding self-recognition, is shown below.</p>
 <p>In previous tutorials communicating parties blessed each other.</p>
 <p>That won&#39;t be the case here.  CheapDrive won&#39;t bless anyone.</p>
 <p>Instead, CheapDrive will configure, via a command line flag, a
-<a href="/tutorials/security/permissions-authorizer.html">Permissions Authorizer</a> that allows a specific Google user (you) to
+<a href="/vanadium-website/build/security/permissions-authorizer.html">Permissions Authorizer</a> that allows a specific Google user (you) to
 securely access CheapDrive&#39;s service.</p>
 <p>Use the <code>$blessingName</code> you sought above to define a <a href="/glossary.html#permissions">Permissions</a>
 specification for reading:</p>
@@ -509,7 +509,7 @@ might have used the extension <code>email</code>.</p>
 <p>If Alice extended that blessing to her intern Bob, it would likely end
 with <code>docs:lawyer:intern:bob</code>.  You might also extend a blessing to
 <code>family</code> or <code>friends</code>, as Alice did in
-<a href="/tutorials/security/first-party-caveats.html">earlier tutorials</a>.</p>
+<a href="/vanadium-website/build/security/first-party-caveats.html">earlier tutorials</a>.</p>
 <p>Blessing names show up in server logs, facilitating access analysis.</p>
 
     </main>

@@ -169,13 +169,13 @@ All tutorials require Vanadium <a href="/installation/">installation</a>, and mu
 </div>
 
       <h1 id="introduction">Introduction</h1>
-<p>In the <a href="/tutorials/basics.html">basics tutorial</a>, you ran the fortune server as a background process
+<p>In the <a href="/vanadium-website/build/basics.html">basics tutorial</a>, you ran the fortune server as a background process
 from the terminal.</p>
 <p>In this tutorial, you&#39;ll learn how to use the device manager to run your server
 remotely (however, the device manager you&#39;ll be running as part of the tutorial
 is running on the same computer to keep things simple).</p>
 <h1 id="credentials">Credentials</h1>
-<p>We&#39;ll be using default <a href="/tutorials/basics.html#authorization">credentials</a> for all the commands and servers we start
+<p>We&#39;ll be using default <a href="/vanadium-website/build/basics.html#authorization">credentials</a> for all the commands and servers we start
 from the terminal. Recall that <code>tutorial</code> is the blessing name for these credentials:</p>
 <!-- @setCredentials @test -->
 <pre><code>export V23_CREDENTIALS=&quot;$V_TUT/cred/basics&quot;
@@ -186,10 +186,10 @@ responsible for installing and running other Vanadium applications on behalf of
 users.</p>
 <p>The first step is to install and start a device manager on your computer (taking
 care first to clean up any previous ones). The device manager uses the security
-agent introduced in the <a href="/tutorials/security/agent.html">agent tutorial</a> to manage principals for itself and all
+agent introduced in the <a href="/vanadium-website/build/security/agent.html">agent tutorial</a> to manage principals for itself and all
 the applications run under it.</p>
 <p>The device manager has a built-in mount table, which we can us for service
-discovery (as we learned in the <a href="/tutorials/naming/mount-table.html">mount table tutorial</a>). So give it a fixed
+discovery (as we learned in the <a href="/vanadium-website/build/naming/mount-table.html">mount table tutorial</a>). So give it a fixed
 port.</p>
 <!-- @installAndStartDeviceManager @test @sleep -->
 <pre><code>export V23_DEVICE_DIR=&quot;$V_TUT/devmgr&quot;
@@ -240,7 +240,7 @@ echo &quot;Instantiated and started: ${INSTANCE_NAME}&quot;
 <pre><code>LOGFILE=`${V_BIN}/namespace glob &quot;${INSTANCE_NAME}/logs/STDOUT-*&quot;`
 ${V_BIN}/debug logs read $LOGFILE
 </code></pre><h1 id="run-the-client">Run the client</h1>
-<p>As in the <a href="/tutorials/basics.html">basics tutorial</a>, use the client to make a call to the server:</p>
+<p>As in the <a href="/vanadium-website/build/basics.html">basics tutorial</a>, use the client to make a call to the server:</p>
 <!-- @fortuneClient @test -->
 <pre><code>&quot;${V_TUT}/bin/client&quot; --server &quot;/localhost:$PORT_MT/myFortunes&quot;
 </code></pre><h1 id="cleanup">Cleanup</h1>

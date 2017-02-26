@@ -702,7 +702,7 @@ There are a few things to note:
     writing a real application
 
 [activity]: http://developer.android.com/guide/components/activities.html
-[client-server]: /tutorials/basics.html
+[client-server]: /vanadium-website/build/basics.html
 [endpoint]: /glossary.html#endpoint
 [gradle]: http://gradle.org/
 [gradleinstall]: https://docs.gradle.org/current/userguide/installation.html

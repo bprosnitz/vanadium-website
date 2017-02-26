@@ -267,9 +267,9 @@ info.
 * Use `principal recvblessing` to send a blessing over the network
   from the command line.
 
-[blessing-example]: /tutorials/security/principals-and-blessings.html#blessings
-[principals tutorial]: /tutorials/security/principals-and-blessings.html#principals
-[previous-usage]: /tutorials/security/permissions-authorizer.html#a-specific-permissions-map
+[blessing-example]: /vanadium-website/build/security/principals-and-blessings.html#blessings
+[principals tutorial]: /vanadium-website/build/security/principals-and-blessings.html#principals
+[previous-usage]: /vanadium-website/build/security/permissions-authorizer.html#a-specific-permissions-map
 [file descriptor]: http://en.wikipedia.org/wiki/File_descriptor
 [`ssh-agent`]: http://en.wikipedia.org/wiki/Ssh-agent
-[second terminal]: /tutorials/setup.html
+[second terminal]: /vanadium-website/build/setup.html

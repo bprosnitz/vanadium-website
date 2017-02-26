@@ -169,7 +169,7 @@ All tutorials require Vanadium <a href="/installation/">installation</a>, and mu
 </div>
 
       <h1 id="motivation">Motivation</h1>
-<p>In the <a href="/tutorials/security/principals-and-blessings.html#principals">principals tutorial</a> you used the <code>principal create</code> command
+<p>In the <a href="/vanadium-website/build/security/principals-and-blessings.html#principals">principals tutorial</a> you used the <code>principal create</code> command
 to create the <em>principals</em> Alice, Bob, etc.  The operation made
 collections of files in the specified target directories, e.g.:</p>
 <!-- @lsCredAlice @test -->
@@ -210,7 +210,7 @@ back to the child.</p>
 server code using two instances of the agent - one becomes Alice, the
 other becomes Bob.</p>
 <p>The only difference between the following command sequence and
-<a href="/tutorials/security/permissions-authorizer.html#a-specific-permissions-map">previous usage</a> is that <code>agentd</code> takes the
+<a href="/vanadium-website/build/security/permissions-authorizer.html#a-specific-permissions-map">previous usage</a> is that <code>agentd</code> takes the
 <code>--v23.credentials</code> flag, rather than the client and server.</p>
 <!-- @twoAgents @test -->
 <pre><code># Clean up from previous attempt, if any.
@@ -306,7 +306,7 @@ $V_BIN/agentd --v23.credentials $V_TUT/cred/alice \
 principal running the server - specifically, the client runs with the
 blessing <code>alice:client</code> (note the server&#39;s permissions).</p>
 <h1 id="secure-blessing">Secure blessing</h1>
-<p><a href="/tutorials/security/principals-and-blessings.html#blessings">Previous examples of blessing</a> used a Unix pipe to
+<p><a href="/vanadium-website/build/security/principals-and-blessings.html#blessings">Previous examples of blessing</a> used a Unix pipe to
 transmit a blessing from one process running <code>principal bless</code> to some
 other process using <code>principal set forpeer</code>.</p>
 <p>The problem in that is not the blessing being sent &#39;in the clear&#39; -
@@ -330,7 +330,7 @@ EOF
 $V_BIN/agentd --v23.credentials $V_TUT/cred/bob \
     bash $V_TUT/subshell1.sh &amp;
 </code></pre><div class="note info"><p>The next commands can be run in the same terminal, but you might want to
-start a <a href="/tutorials/setup.html">second terminal</a> to keep the process output disentangled.</p>
+start a <a href="/vanadium-website/build/setup.html">second terminal</a> to keep the process output disentangled.</p>
 </div>
 
 <p>Now run Alice.  Alice will transmit the blessing, using instructions

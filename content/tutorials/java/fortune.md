@@ -419,7 +419,7 @@ You have:
 - Established communication between the Java and Go clients and servers.
 - Learned about using Vanadium in Java as compared to Go.
 
-[client-server]: /tutorials/basics.html
+[client-server]: /vanadium-website/build/basics.html
 [endpoint]: /glossary.html#endpoint
 [gradle]: http://gradle.org/
 [gradleinstall]: https://docs.gradle.org/current/userguide/installation.html

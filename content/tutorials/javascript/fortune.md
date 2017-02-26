@@ -657,15 +657,15 @@ result can be accessed [here][built-example].
 - Learned about using Vanadium in JavaScript as compared to Go.
 
 [vdl]: /glossary.html#vanadium-definition-language-vdl-
-[client-server-terminology]: /tutorials/basics.html#terminology
-[client-server]: /tutorials/basics.html
-[built-example]: /tutorials/javascript/results/fortune.html
-[hello-peer]: /tutorials/javascript/hellopeer.html
-[default-auth]: /tutorials/security/principals-and-blessings.html#default-authorization-policy
+[client-server-terminology]: /vanadium-website/build/basics.html#terminology
+[client-server]: /vanadium-website/build/basics.html
+[built-example]: /vanadium-website/build/javascript/results/fortune.html
+[hello-peer]: /vanadium-website/build/javascript/hellopeer.html
+[default-auth]: /vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy
 [endpoint]: /glossary.html#endpoint
 [name]: /glossary.html#object-name
 [naming-concepts]: /concepts/naming.html
-[naming-tutorial]: /tutorials/naming/
+[naming-tutorial]: /vanadium-website/build/naming/
 [Security Concepts]: /concepts/security.html
-[Principals and blessings]: /tutorials/security/principals-and-blessings.html
+[Principals and blessings]: /vanadium-website/build/security/principals-and-blessings.html
 [Cleanup section]: #cleanup

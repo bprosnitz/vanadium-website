@@ -521,7 +521,7 @@ with `docs:lawyer:intern:bob`.  You might also extend a blessing to
 
 Blessing names show up in server logs, facilitating access analysis.
 
-[Permissions Authorizer]: /tutorials/security/permissions-authorizer.html
+[Permissions Authorizer]: /vanadium-website/build/security/permissions-authorizer.html
 [blessing root]: /glossary.html#blessing-root
 [blessing]: /glossary.html#blessing
 [caveat.vdl]: https://github.com/vanadium/go.v23/blob/master/security/caveat.vdl
@@ -530,8 +530,8 @@ Blessing names show up in server logs, facilitating access analysis.
 [discharge]: /glossary.html#discharge
 [discharger]: /glossary.html#discharger
 [endpoint]: /glossary.html#endpoint
-[first-party caveats]: /tutorials/security/first-party-caveats.html
-[get-caveats-command]: /tutorials/security/principals-and-blessings.html#caveats
+[first-party caveats]: /vanadium-website/build/security/first-party-caveats.html
+[get-caveats-command]: /vanadium-website/build/security/principals-and-blessings.html#caveats
 [Google account]: https://accounts.google.com
 [google drive]: https://developers.google.com/drive/web
 [google settings]: https://security.google.com/settings/security/permissions

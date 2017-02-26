@@ -633,17 +633,17 @@ kill_tut_process TUT_PID_SERVER
 
 * You were introduced to the generic client `vrpc`.
 
-[hello world tutorial]: /tutorials/hello-world.html
+[hello world tutorial]: /vanadium-website/build/hello-world.html
 [install]: /installation/
-[default-auth]: /tutorials/security/principals-and-blessings.html#default-authorization-policy
+[default-auth]: /vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy
 [vanadium-definition-language]: /glossary.html#vanadium-definition-language-vdl-
 [blessing]: /glossary.html#blessing
-[naming tutorials]: /tutorials/naming/
-[mount table tutorial]: /tutorials/naming/mount-table.html
-[suffix tutorial]: /tutorials/naming/suffix.html
+[naming tutorials]: /vanadium-website/build/naming/
+[mount table tutorial]: /vanadium-website/build/naming/mount-table.html
+[suffix tutorial]: /vanadium-website/build/naming/suffix.html
 [principal]: /glossary.html#principal
 [classic-fortune]: http://en.wikipedia.org/wiki/Fortune_(Unix)
 [concepts-security]: /concepts/security.html
 [vrpc]: /glossary.html#vrpc
-[cat command]: /tutorials/faq.html#where-is-the-source-code-
-[Go]:  /tutorials/faq.html#do-i-need-to-know-go-
+[cat command]: /vanadium-website/build/faq.html#where-is-the-source-code-
+[Go]:  /vanadium-website/build/faq.html#do-i-need-to-know-go-

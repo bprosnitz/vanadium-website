@@ -210,8 +210,8 @@ kill_tut_process TUT_PID_SERVER
 [Role Based Access Control]: http://en.wikipedia.org/wiki/Role-based_access_control
 [blessing]: /glossary.html#blessing
 [cert-chain]: /glossary.html#certificate-chain
-[custom-authorizer]: /tutorials/security/custom-authorizer.html
+[custom-authorizer]: /vanadium-website/build/security/custom-authorizer.html
 [principal]: /glossary.html#principal
-[default-auth]: /tutorials/security/principals-and-blessings.html#default-authorization-policy
-[blessings]: /tutorials/security/principals-and-blessings.html#blessings
-[default-auth]: /tutorials/security/principals-and-blessings.html#default-authorization-policy
+[default-auth]: /vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy
+[blessings]: /vanadium-website/build/security/principals-and-blessings.html#blessings
+[default-auth]: /vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy

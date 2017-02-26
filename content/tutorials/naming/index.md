@@ -34,10 +34,10 @@ Vanadium naming.
 The [naming concepts document] provides a high-level discussion
 of naming that complements these tutorials.
 
-[The mount table]: /tutorials/naming/mount-table.html
-[Namespaces]: /tutorials/naming/namespace.html
-[The suffix - Part I]: /tutorials/naming/suffix-part1.html
-[The suffix - Part II]: /tutorials/naming/suffix-part2.html
-[Globber]: /tutorials/naming/globber.html
+[The mount table]: /vanadium-website/build/naming/mount-table.html
+[Namespaces]: /vanadium-website/build/naming/namespace.html
+[The suffix - Part I]: /vanadium-website/build/naming/suffix-part1.html
+[The suffix - Part II]: /vanadium-website/build/naming/suffix-part2.html
+[Globber]: /vanadium-website/build/naming/globber.html
 [naming concepts document]: /concepts/naming.html
-[basics tutorial]: /tutorials/basics.html
+[basics tutorial]: /vanadium-website/build/basics.html

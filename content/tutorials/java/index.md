@@ -23,5 +23,5 @@ installation.
   _Wherein_ you build an Android phone locator service.
 
 [vdl]: /glossary.html#vanadium-definition-language-vdl-
-[fortune]: /tutorials/java/fortune.html
-[android]: /tutorials/java/android.html
+[fortune]: /vanadium-website/build/java/fortune.html
+[android]: /vanadium-website/build/java/android.html

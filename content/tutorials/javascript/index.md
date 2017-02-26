@@ -32,6 +32,6 @@ running in the browser, the code can be adapted to run in a [Node.js] environmen
 [vdl]: /glossary.html#vanadium-definition-language-vdl-
 [Node.js]: https://nodejs.org/
 [browser]: https://www.google.com/chrome/
-[hellopeer]: /tutorials/javascript/hellopeer.html
-[fortune]: /tutorials/javascript/fortune.html
-[Client/Server Basics tutorial]: /tutorials/basics.html
+[hellopeer]: /vanadium-website/build/javascript/hellopeer.html
+[fortune]: /vanadium-website/build/javascript/fortune.html
+[Client/Server Basics tutorial]: /vanadium-website/build/basics.html

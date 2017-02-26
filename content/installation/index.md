@@ -41,6 +41,6 @@ Vanadium itself doesn't depend on this variable.
 
 Feel free to move `JIRI_ROOT` and `V23_RELEASE` elsewhere if you like.
 
-[source]: /tutorials/faq.html#why-source-
-[tutorials]: /tutorials/hello-world.html
+[source]: /vanadium-website/build/faq.html#why-source-
+[tutorials]: /vanadium-website/build/hello-world.html
 [step-by-step instructions]: /installation/step-by-step.html

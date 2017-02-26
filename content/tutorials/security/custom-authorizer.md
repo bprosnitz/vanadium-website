@@ -181,9 +181,9 @@ kill_tut_process TUT_PID_SERVER
 * Alice can bless anyone as friend or family to give them access
   without modifying her server.
 
-[principal-dump]: /tutorials/security/principals-and-blessings.html#principal-dump
-[permissions-authorizer]: /tutorials/security/permissions-authorizer.html
-[custom-authorizer]: /tutorials/security/custom-authorizer.html
-[principals-and-blessings]: /tutorials/security/principals-and-blessings.html
-[first-party-caveats]: /tutorials/security/first-party-caveats.html
+[principal-dump]: /vanadium-website/build/security/principals-and-blessings.html#principal-dump
+[permissions-authorizer]: /vanadium-website/build/security/permissions-authorizer.html
+[custom-authorizer]: /vanadium-website/build/security/custom-authorizer.html
+[principals-and-blessings]: /vanadium-website/build/security/principals-and-blessings.html
+[first-party-caveats]: /vanadium-website/build/security/first-party-caveats.html
 [security.Authorizer]: https://vanadium.googlesource.com/release.go.v23/+/master/security/model.go#465

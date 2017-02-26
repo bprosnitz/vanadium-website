@@ -171,7 +171,7 @@ If you would like to generate files from this tutorial without the copy/paste st
 </div>
 
       <h1 id="introduction">Introduction</h1>
-<p>In the <a href="/tutorials/hello-world.html">hello world tutorial</a>, you got a client and server running.</p>
+<p>In the <a href="/vanadium-website/build/hello-world.html">hello world tutorial</a>, you got a client and server running.</p>
 <p>In this tutorial, you&#39;ll build a slightly more complex client and
 server that will serve as the framework for deeper explorations of
 Vanadium <em>security</em> and <em>service discovery</em>.</p>
@@ -181,7 +181,7 @@ need to change (e.g., a dispatcher, an authorizer), keeping later
 code shorter and clearer. That means doing a few odd things here, like
 writing whole code files that, for the time being, only return
 <strong>nil</strong>.</p>
-<p>This tutorial will otherwise repeat the structure of the <a href="/tutorials/hello-world.html">hello world
+<p>This tutorial will otherwise repeat the structure of the <a href="/vanadium-website/build/hello-world.html">hello world
 tutorial</a>.</p>
 <h1 id="terminology">Terminology</h1>
 <p>A Vanadium program can hold any number of <strong>servers</strong> and <strong>clients</strong>.
@@ -195,7 +195,7 @@ authorizer approves.  A dispatcher holds an authorizer
 and one or more services.</p>
 <p>A client is just stub code, typed to match a particular service
 interface, bound to one or more endpoints on the network via a name
-(more on that in the <a href="/tutorials/naming/">naming tutorials</a>).  It&#39;s the boilerplate
+(more on that in the <a href="/vanadium-website/build/naming/">naming tutorials</a>).  It&#39;s the boilerplate
 used to contact remote services.</p>
 <p><img src="/images/tut/basic-program-1auth.svg" alt=""></p>
 <p>A service has no knowledge of the authorizer protecting it.  Neither
@@ -218,7 +218,7 @@ The service you&#39;ll build here stores and offers up fortunes.</p>
 <p>The first step to making a Vanadium service is to define it using the
 <a href="/glossary.html#vanadium-definition-language-vdl-">Vanadium Definition Language</a> (VDL).</p>
 <p>The following command (read more about <code>cat</code> usage
-<a href="/tutorials/faq.html#where-is-the-source-code-">here</a>) will put the VDL in the right spot:</p>
+<a href="/vanadium-website/build/faq.html#where-is-the-source-code-">here</a>) will put the VDL in the right spot:</p>
 <!-- @defineService @buildjs @test @testui @completer -->
 <pre><code>mkdir -p $V_TUT/src/fortune/ifc
  cat - &lt;&lt;EOF &gt;$V_TUT/src/fortune/ifc/fortune.vdl
@@ -231,7 +231,7 @@ type Fortune interface {
   Add(wisdom string) error
 }
 EOF
-</code></pre><p>This file defines the <a href="/tutorials/faq.html#do-i-need-to-know-go-">Go</a> package <code>ifc</code> (an abbreviation of
+</code></pre><p>This file defines the <a href="/vanadium-website/build/faq.html#do-i-need-to-know-go-">Go</a> package <code>ifc</code> (an abbreviation of
 <em>interface</em>).  You&#39;ll soon define the packages <code>service</code>, <code>util</code> and
 <code>main</code>.  Package symbols will be isolated from each other, per Go
 namespace rules, making it easier to reason about code dependencies.</p>
@@ -320,7 +320,7 @@ function called <code>util.MakeAuthorizer</code> in a file called
 changes, etc.), switching to a new implementation means replacing the
 file and recompiling.</p>
 <p>The first version of <code>authorizer.go</code> invokes the default Vanadium
-authorization policy (to be discussed <a href="/tutorials/security/principals-and-blessings.html#default-authorization-policy">later</a>):</p>
+authorization policy (to be discussed <a href="/vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy">later</a>):</p>
 <!-- @authorizer @test @testui @completer -->
 <pre><code>mkdir -p $V_TUT/src/fortune/server/util
  cat - &lt;&lt;EOF &gt;$V_TUT/src/fortune/server/util/authorizer.go
@@ -363,13 +363,13 @@ go build fortune/server/util
 <p>The following utility package allows endpoints to be written to a flag
 controlled file.</p>
 <p>In this tutorial, rather than specify a port as was done in the
-<a href="/tutorials/hello-world.html">hello world tutorial</a>, we let the system pick a free one, and from it
+<a href="/vanadium-website/build/hello-world.html">hello world tutorial</a>, we let the system pick a free one, and from it
 generate an <em>endpoint specification</em>.</p>
 <p>Every time the server starts, the endpoint address changes.  The
 address is written to a file named via a flag.  A client must know
 this address in order to connect to the server, so it reads it from
 the file.</p>
-<p>The <a href="/tutorials/naming/mount-table.html">mount table tutorial</a> describes how a <em>mount table</em> replaces this
+<p>The <a href="/vanadium-website/build/naming/mount-table.html">mount table tutorial</a> describes how a <em>mount table</em> replaces this
 file-based exchange with a service.</p>
 <!-- @intializer @test @testui @completer -->
 <pre><code>mkdir -p $V_TUT/src/fortune/server/util
@@ -554,7 +554,7 @@ get a fortune:</p>
 <p>Let&#39;s change things to allow the call to succeed, then compare the two
 situations.</p>
 <h2 id="second-run">Second run</h2>
-<p>The simplest thing to do to allow a call to succeed under the <a href="/tutorials/security/principals-and-blessings.html#default-authorization-policy">default
+<p>The simplest thing to do to allow a call to succeed under the <a href="/vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy">default
 authorization policy</a> is to run the client and server as
 the same <a href="/glossary.html#principal">principal</a> (think of this as an <em>identity</em> for now).  This
 makes the two processes indistinguishable from an authorization point
@@ -641,7 +641,7 @@ $V_BIN/vrpc --v23.credentials $V_TUT/cred/basics \
 <li><p>You created a server that hosted a Fortune service defined using VDL
 and made RPCs to it with a simple command line client.</p>
 </li>
-<li><p>The <a href="/tutorials/security/principals-and-blessings.html#default-authorization-policy">default security policy</a> prevented your initial
+<li><p>The <a href="/vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy">default security policy</a> prevented your initial
 RPCs from working.</p>
 </li>
 <li><p>You &#39;fixed&#39; this by running the client and server as the <em>same</em>

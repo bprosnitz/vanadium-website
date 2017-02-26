@@ -317,9 +317,9 @@ unset V23_NAMESPACE
 
 * These services can be published in the server's namespace.
 
-[fortuneAlpha]: /tutorials/naming/mount-table.html#mounting
-[default authorizer]: /tutorials/security/principals-and-blessings.html#default-authorization-policy
+[fortuneAlpha]: /vanadium-website/build/naming/mount-table.html#mounting
+[default authorizer]: /vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy
 [dispatcher interface]: https://godoc.org/v.io/v23/rpc#Dispatcher
-[v23_namespace]: /tutorials/naming/mount-table.html#the-namespace-variable
-[Globber]: /tutorials/naming/globber.html
-[ChildrenGlobber]: /tutorials/naming/globber.html#introduction
+[v23_namespace]: /vanadium-website/build/naming/mount-table.html#the-namespace-variable
+[Globber]: /vanadium-website/build/naming/globber.html
+[ChildrenGlobber]: /vanadium-website/build/naming/globber.html#introduction

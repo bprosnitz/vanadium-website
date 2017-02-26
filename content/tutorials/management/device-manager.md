@@ -142,7 +142,7 @@ As in the [basics tutorial], use the client to make a call to the server:
 You set up a device manager on your computer, and used the `device` command-line
 tool to install and start an application on it.
 
-[basics tutorial]: /tutorials/basics.html
-[agent tutorial]: /tutorials/security/agent.html
-[mount table tutorial]: /tutorials/naming/mount-table.html
-[credentials]: /tutorials/basics.html#authorization
+[basics tutorial]: /vanadium-website/build/basics.html
+[agent tutorial]: /vanadium-website/build/security/agent.html
+[mount table tutorial]: /vanadium-website/build/naming/mount-table.html
+[credentials]: /vanadium-website/build/basics.html#authorization

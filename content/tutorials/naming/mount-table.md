@@ -385,14 +385,14 @@ unset V23_NAMESPACE
   can be used instead of flags to configure a Vanadium program.
 
 [naming concepts document]: /concepts/naming.html
-[basics tutorial]: /tutorials/basics.html
-[random credentials]: /tutorials/basics.html#authorization
+[basics tutorial]: /vanadium-website/build/basics.html
+[random credentials]: /vanadium-website/build/basics.html#authorization
 [principal]: /glossary.html#principal
 [endpoint]: /glossary.html#endpoint
 [VDL]: /glossary.html#vanadium-definition-language-vdl-
-[vrpc]: /tutorials/basics.html#the-vrpc-client
-[agent tutorial]: /tutorials/security/agent.html
-[namespace tutorial]: /tutorials/naming/namespace.html
+[vrpc]: /vanadium-website/build/basics.html#the-vrpc-client
+[agent tutorial]: /vanadium-website/build/security/agent.html
+[namespace tutorial]: /vanadium-website/build/naming/namespace.html
 [mounttable interface]: https://vanadium.googlesource.com/release.go.v23/+/master/services/mounttable/service.vdl
-[use the same credentials]: /tutorials/basics.html#authorization
+[use the same credentials]: /vanadium-website/build/basics.html#authorization
 [glob]: http://en.wikipedia.org/wiki/Glob_%28programming%29

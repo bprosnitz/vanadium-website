@@ -172,7 +172,7 @@ If you would like to generate files from this tutorial without the copy/paste st
 
       <h1 id="introduction">Introduction</h1>
 <p>In an earlier tutorial, a fortune server was
-<a href="/tutorials/naming/mount-table.html#mounting">mounted in a table with the name <code>fortuneAlpha</code></a>.</p>
+<a href="/vanadium-website/build/naming/mount-table.html#mounting">mounted in a table with the name <code>fortuneAlpha</code></a>.</p>
 <p>Since that server contained only one service, clients needed nothing
 more than that name, as seen in the mount table, to start using the
 service.</p>
@@ -208,7 +208,7 @@ the single service.</p>
 <p>Examples below will show a client asking for a fortune from a service,
 named <code>prophInc/cassandra</code>.  The resolution process will
 determine that <code>prophInc</code> is a name associated with a server
-endpoint in a mount table (exactly like <a href="/tutorials/naming/mount-table.html#mounting"><code>fortuneAlpha</code></a>
+endpoint in a mount table (exactly like <a href="/vanadium-website/build/naming/mount-table.html#mounting"><code>fortuneAlpha</code></a>
 was earlier), and that <code>cassandra</code> is a suffix.</p>
 <p>This suffix <code>cassandra</code> is ultimately passed to the <code>Lookup</code> method in
 a <a href="https://godoc.org/v.io/v23/rpc#Dispatcher">dispatcher interface</a>.  <code>Lookup</code> accepts a suffix and returns a
@@ -268,7 +268,7 @@ func MakeDispatcher() rpc.Dispatcher {
 EOF
 </code></pre><p><strong>Code walk</strong></p>
 <p>The server&#39;s <code>root</code> object is accessed with an empty suffix (<em>&quot;&quot;</em>). In
-this example, the <code>root</code> object is a <a href="/tutorials/naming/globber.html#introduction">ChildrenGlobber</a> service that makes
+this example, the <code>root</code> object is a <a href="/vanadium-website/build/naming/globber.html#introduction">ChildrenGlobber</a> service that makes
 the fortune service names discoverable in the server&#39;s namespace.</p>
 <p>This dispatcher uses the suffix as a key in a string-to-service map
 called <code>registry</code>.  If the map lookup fails, <em>a new service is created
@@ -277,7 +277,7 @@ on the fly</em>, and stored in the map using the suffix.</p>
 of <code>Lookup</code>.</p>
 <p><code>Lookup</code> must also return an authorizer.  A dispatcher&#39;s job is to
 determine which authorizer to use with a given service. In this example,
-we use the <a href="/tutorials/security/principals-and-blessings.html#default-authorization-policy">default authorizer</a> for simplicity.</p>
+we use the <a href="/vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy">default authorizer</a> for simplicity.</p>
 <p>Since any server should support concurrent access, its service map should
 be protected my a mutex.</p>
 <h1 id="try-it">Try it</h1>
@@ -323,9 +323,9 @@ the Fortune interface.</p>
 answer is in the server&#39;s namespace.</p>
 <p>The server&#39;s namespace is just like the mount table namespace. It allows
 the server to publish the name of the services that it hosts. In this
-example, this is accomplished by the <a href="/tutorials/naming/globber.html#introduction">ChildrenGlobber</a> service at the
+example, this is accomplished by the <a href="/vanadium-website/build/naming/globber.html#introduction">ChildrenGlobber</a> service at the
 server&#39;s <code>root</code>.</p>
-<p><a href="/tutorials/naming/globber.html#introduction">ChildrenGlobber</a> is covered in more details in the <a href="/tutorials/naming/globber.html">Globber</a> tutorial.</p>
+<p><a href="/vanadium-website/build/naming/globber.html#introduction">ChildrenGlobber</a> is covered in more details in the <a href="/vanadium-website/build/naming/globber.html">Globber</a> tutorial.</p>
 <!-- @globServer -->
 <pre><code>$V_BIN/namespace \
     --v23.credentials $V_TUT/cred/basics \
@@ -334,7 +334,7 @@ server&#39;s <code>root</code>.</p>
 </code></pre><p>Let&#39;s insert a table to make service specifications easier to read.</p>
 <h1 id="mount-it">Mount it</h1>
 <p>Start a mount table and save it in
-<a href="/tutorials/naming/mount-table.html#the-namespace-variable"><code>$V23_NAMESPACE</code></a>:</p>
+<a href="/vanadium-website/build/naming/mount-table.html#the-namespace-variable"><code>$V23_NAMESPACE</code></a>:</p>
 <!-- @startMountTable @test @sleep -->
 <pre><code>PORT_MT=23000  # Pick an unused port.
 kill_tut_process TUT_PID_MT

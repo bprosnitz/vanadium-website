@@ -946,6 +946,6 @@ until Carol grants her another blessing.
 
 We need a summary.
 
-[Fortune tutorial]: /tutorials/javascript/fortune.html
-[Permissions Authorizer tutorial]: /tutorials/security/permissions-authorizer.html
-[Security Tutorials]: /tutorials/security
+[Fortune tutorial]: /vanadium-website/build/javascript/fortune.html
+[Permissions Authorizer tutorial]: /vanadium-website/build/security/permissions-authorizer.html
+[Security Tutorials]: /vanadium-website/build/security

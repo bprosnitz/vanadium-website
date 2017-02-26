@@ -170,7 +170,7 @@ All tutorials require Vanadium <a href="/installation/">installation</a>, and mu
 
       <h1 id="start-server-with-permissions">Start server with permissions</h1>
 <p>This tutorial uses the server with the Permissions authorizer
-(described in the <a href="/tutorials/security/permissions-authorizer.html">permissions-authorizer</a> tutorial):</p>
+(described in the <a href="/vanadium-website/build/security/permissions-authorizer.html">permissions-authorizer</a> tutorial):</p>
 <!-- @startServerWithPerms @test @sleep -->
 <pre><code>kill_tut_process TUT_PID_SERVER
 $V_TUT/bin/server \
@@ -186,7 +186,7 @@ TUT_PID_SERVER=$!
 key). Principals are authorized based on these names.  For instance,
 permissions provide a means of specifying authorization policy using a
 list of patterns that match these names.</p>
-<p>A principal can <a href="/tutorials/security/principals-and-blessings.html#the-bless-operation">bless</a> another principal by
+<p>A principal can <a href="/vanadium-website/build/security/principals-and-blessings.html#the-bless-operation">bless</a> another principal by
 extending one of its names and binding it to the other principal.
 This notion enables <em>delegation</em>, wherein a principal with access to
 a resource by virtue of one of its names passes on that access to

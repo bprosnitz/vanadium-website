@@ -435,6 +435,6 @@ This tutorial demonstrated how to:
 result can be accessed [here][built-example].
 
 [vdl]: /glossary.html#vanadium-definition-language-vdl-
-[built-example]: /tutorials/javascript/results/hello.html
+[built-example]: /vanadium-website/build/javascript/results/hello.html
 [node]: https://nodejs.org/download
 [golang]: http://golang.org

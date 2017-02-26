@@ -191,7 +191,7 @@ kill_tut_process TUT_PID_SERVER
 * An expiry caveat makes the blessing expire after a specified amount
   of time.
 
-[bless]: /tutorials/security/principals-and-blessings.html#the-bless-operation
+[bless]: /vanadium-website/build/security/principals-and-blessings.html#the-bless-operation
 [blessing]: /glossary.html#blessing
 [caveats]: /glossary.html#caveat
-[permissions-authorizer]: /tutorials/security/permissions-authorizer.html
+[permissions-authorizer]: /vanadium-website/build/security/permissions-authorizer.html

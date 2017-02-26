@@ -181,9 +181,9 @@ the same identity, which simplified authorization.</p>
 <p>This tutorial demonstrates how to restrict calls to methods with a more
 sophisticated authorization scheme. This tutorial does not explain the core
 security concepts in much depth, so it is highly recommended that the
-<a href="/tutorials/security">Security Tutorials</a> are completed before starting.</p>
+<a href="/vanadium-website/build/security">Security Tutorials</a> are completed before starting.</p>
 <h3 id="the-return-of-alice-bob-carol-and-diane">The return of Alice, Bob, Carol and Diane</h3>
-<p>The scenario and roles from the <a href="/tutorials/security">Security Tutorials</a> will be replicated here:</p>
+<p>The scenario and roles from the <a href="/vanadium-website/build/security">Security Tutorials</a> will be replicated here:</p>
 <ul>
 <li>Alice hosts a fortune service and has blessings <code>alice</code></li>
 <li>Bob is a friend of Alice (friends can get fortunes, but not add them) and
@@ -199,7 +199,7 @@ addition to the blessings above, each person with have an additional blessing
 from OAuth. This will often be used as a trusted root for confirming the
 identity of the other person.</p>
 <h3 id="sending-blessings">Sending blessings</h3>
-<p>The <a href="/tutorials/security">Security Tutorials</a> passed the blessings and Alice&#39;s public key out of
+<p>The <a href="/vanadium-website/build/security">Security Tutorials</a> passed the blessings and Alice&#39;s public key out of
 band. In this tutorial, they will be sent between peers using the OAuth-blessing
 as a trusted root to verify the identity of the corresponding peer.</p>
 <p>Two main techniques will be explored for sending blessings:</p>
@@ -235,7 +235,7 @@ type Fortune interface {
 }
 EOF
 </code></pre><p>These security tags are used by the Permissions Authorizer, defined in the
-<a href="/tutorials/security/permissions-authorizer.html">Permissions Authorizer tutorial</a>.</p>
+<a href="/vanadium-website/build/security/permissions-authorizer.html">Permissions Authorizer tutorial</a>.</p>
 <h3 id="provideblessings-vdl">ProvideBlessings VDL</h3>
 <p>Alice also runs a ProvideBlessings service, which allows any client to make the
 <code>GetBlessings</code> RPC. On each request, the method prompts Alice to decide whether to
@@ -263,7 +263,7 @@ EOF
 <p>Alice runs two services in this example, a Fortune-teller service and a service
 that provides blessings to callers.</p>
 <h4 id="fortune-service">Fortune service</h4>
-<p><strong>What follows is a copy of the Fortune implementation from the <a href="/tutorials/javascript/fortune.html">Fortune tutorial</a>.</strong></p>
+<p><strong>What follows is a copy of the Fortune implementation from the <a href="/vanadium-website/build/javascript/fortune.html">Fortune tutorial</a>.</strong></p>
 <p>The access rules defined in VDL apply to this service despite no change to the
 service body because the Fortune Service adds the VDL interface definition to its
 prototype chain.</p>

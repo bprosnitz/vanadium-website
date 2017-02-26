@@ -171,8 +171,8 @@ If you would like to generate files from this tutorial without the copy/paste st
 </div>
 
       <h1 id="introduction">Introduction</h1>
-<p>In the suffix <a href="/tutorials/naming/suffix-part1.html">Part I</a>, you built a fortune server with multiple services.
-For simplicity, this server used the <a href="/tutorials/security/principals-and-blessings.html#default-authorization-policy">default authorizer</a> and only allowed
+<p>In the suffix <a href="/vanadium-website/build/naming/suffix-part1.html">Part I</a>, you built a fortune server with multiple services.
+For simplicity, this server used the <a href="/vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy">default authorizer</a> and only allowed
 calls from the same principal.</p>
 <p>In Part II, you will learn how to implement a fine-grained access control
 policy for your services.</p>
@@ -202,8 +202,8 @@ apprentice fortune teller. [<em>new</em>]</p>
 <p>To meet these requirements, we&#39;ll use a custom authorizer.</p>
 <p>We <em>won&#39;t</em> need a new dispatcher, or a new service implementation.</p>
 <h2 id="new-authorizer">New authorizer</h2>
-<p>In <a href="/tutorials/naming/suffix-part1.html">Part I</a> and other tutorials we encountered the so-called <a href="/tutorials/security/principals-and-blessings.html#default-authorization-policy">default authorizer</a>
-and the <a href="/tutorials/security/permissions-authorizer.html">Permissions authorizer</a>. The requirements here are out of scope for
+<p>In <a href="/vanadium-website/build/naming/suffix-part1.html">Part I</a> and other tutorials we encountered the so-called <a href="/vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy">default authorizer</a>
+and the <a href="/vanadium-website/build/security/permissions-authorizer.html">Permissions authorizer</a>. The requirements here are out of scope for
 the default authorizer. The Permissions authorizer at the time of writing is
 configured at server start time, before we know the names of the
 services that the server will be running, so it falls short as well.</p>
@@ -279,7 +279,7 @@ client has a blessing of the form <code>{server}:consultant:{service}</code>.</p
 <p>The third <em>if</em> allows interns the same sort of service-specific
 access if their blessing has a particular pattern.</p>
 <p>The fourth <em>if</em> allows customers to get <em>read-only</em> access, exploiting
-the <code>Reader</code> annotation in the <a href="/tutorials/security/permissions-authorizer.html#permissions-policy">fortune VDL</a> file.</p>
+the <code>Reader</code> annotation in the <a href="/vanadium-website/build/security/permissions-authorizer.html#permissions-policy">fortune VDL</a> file.</p>
 <h1 id="try-it">Try it</h1>
 <h2 id="new-principals">New principals</h2>
 <p>First, initialize some principals.
@@ -332,7 +332,7 @@ export V23_NAMESPACE=/localhost:$PORT_MT
 </code></pre><p>The error message will be something like: <em>Client doesn&#39;t trust the
 server.</em> That&#39;s a runtime error - the code you wrote above hasn&#39;t even
 been run yet.  Cassandra has no knowledege of Prophecies Inc.</p>
-<p>You&#39;ve <a href="/tutorials/security/principals-and-blessings.html#blessings">learned how to fix this</a>; Cassandra needs
+<p>You&#39;ve <a href="/vanadium-website/build/security/principals-and-blessings.html#blessings">learned how to fix this</a>; Cassandra needs
 a blessing from the server&#39;s principal:</p>
 <!-- @blessCassandra @test -->
 <pre><code>$V_BIN/principal bless \

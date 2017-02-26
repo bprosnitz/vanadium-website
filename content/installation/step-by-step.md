@@ -160,7 +160,7 @@ To sync to the latest version of the Vanadium source code:
 
     jiri update
 
-[why-bash]: /tutorials/faq.html#why-bash-
+[why-bash]: /vanadium-website/build/faq.html#why-bash-
 [go-install]: http://golang.org/doc/install
 [git]: http://git-scm.com/
 [brew]: http://brew.sh/

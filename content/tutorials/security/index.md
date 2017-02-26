@@ -44,13 +44,13 @@ tutorials, e.g. the [JavaScript tutorial] and the [Mount table tutorial].
 The [Security Concepts document] provides a general discussion of
 Vanadium security that complements these security tutorials.
 
-[Permissions]: /tutorials/security/permissions-authorizer.html
-[Custom Authorizer]: /tutorials/security/custom-authorizer.html
-[Principals and Blessings]: /tutorials/security/principals-and-blessings.html
-[The Agent]: /tutorials/security/agent.html
-[Caveats]: /tutorials/security/first-party-caveats.html
-[Third-party Caveats]: /tutorials/security/third-party-caveats.html
-[client-server]: /tutorials/basics.html
-[JavaScript tutorial]: /tutorials/javascript/hellopeer.html
+[Permissions]: /vanadium-website/build/security/permissions-authorizer.html
+[Custom Authorizer]: /vanadium-website/build/security/custom-authorizer.html
+[Principals and Blessings]: /vanadium-website/build/security/principals-and-blessings.html
+[The Agent]: /vanadium-website/build/security/agent.html
+[Caveats]: /vanadium-website/build/security/first-party-caveats.html
+[Third-party Caveats]: /vanadium-website/build/security/third-party-caveats.html
+[client-server]: /vanadium-website/build/basics.html
+[JavaScript tutorial]: /vanadium-website/build/javascript/hellopeer.html
 [Security Concepts document]: /concepts/security.html
-[Mount table tutorial]: /tutorials/naming/mount-table.html
+[Mount table tutorial]: /vanadium-website/build/naming/mount-table.html

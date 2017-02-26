@@ -239,12 +239,12 @@ All of the above and more will be covered in detail in subsequent
 tutorials.
 
 [install]: /installation/
-[default-auth]: /tutorials/security/principals-and-blessings.html#default-authorization-policy
+[default-auth]: /vanadium-website/build/security/principals-and-blessings.html#default-authorization-policy
 [vanadium-definition-language]: /glossary.html#vanadium-definition-language-vdl-
-[mount table tutorial]: /tutorials/naming/mount-table.html
-[suffix tutorial]: /tutorials/naming/suffix.html
+[mount table tutorial]: /vanadium-website/build/naming/mount-table.html
+[suffix tutorial]: /vanadium-website/build/naming/suffix.html
 [principal]: /glossary.html#principal
 [concepts-security]: /concepts/security.html
 [vrpc]: /glossary.html#vrpc
-[cat command]: /tutorials/faq.html#where-is-the-source-code-
-[faq-go]: /tutorials/faq.html#do-i-need-to-know-go-
+[cat command]: /vanadium-website/build/faq.html#where-is-the-source-code-
+[faq-go]: /vanadium-website/build/faq.html#do-i-need-to-know-go-

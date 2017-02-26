@@ -68,7 +68,7 @@ If you're having trouble, you can do tutorials manually to pinpoint a problem.
 
 Behave like a user following the instructions, but skip the Vanadium
 installation step and start the tutorials with the [setup
-page](/tutorials/setup.html). Due to the definitions above, the tutorial code
+page](/vanadium-website/build/setup.html). Due to the definitions above, the tutorial code
 will run using your local development branch.
 
 ## Purely external execution

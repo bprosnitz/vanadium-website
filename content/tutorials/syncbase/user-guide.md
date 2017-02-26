@@ -397,7 +397,7 @@ resolvers, additional types of predefined resolvers, CRDTs, etc.*
 
 [Syncbase Overview]: /concepts/syncbase-overview.html
 [installation instructions]: /installation/
-[syncQL]: /tutorials/syncbase/syncql-tutorial.html
+[syncQL]: /vanadium-website/build/syncbase/syncql-tutorial.html
 [VOM]: /concepts/rpc.html#vom
 [VDL]: /concepts/rpc.html#vdl
 [Vanadium security model]: /concepts/security.html

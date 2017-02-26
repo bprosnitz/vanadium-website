@@ -178,7 +178,7 @@ If you would like to generate files from this tutorial without the copy/paste st
 
       <h2 id="introduction">Introduction</h2>
 <p>This tutorial creates a fortune teller example in order to go more deeply into
-some Vanadium concepts than <a href="/tutorials/javascript/hellopeer.html">Hello Peer</a>. In addition, this
+some Vanadium concepts than <a href="/vanadium-website/build/javascript/hellopeer.html">Hello Peer</a>. In addition, this
 tutorial demonstrates how to connect
 the application with a compatible Go-language fortune application.</p>
 <p>JavaScript Vanadium applications are based around the same fundamental structure
@@ -186,7 +186,7 @@ as Go Vanadium applications. Because of the similarities, this tutorial
 focuses on the differences between building Vanadium applications
 in Go and JavaScript.</p>
 <h2 id="defining-the-fortune-service">Defining the Fortune service</h2>
-<p>In the <a href="/tutorials/javascript/hellopeer.html">Hello Peer</a> tutorial, <a href="/glossary.html#vanadium-definition-language-vdl-">VDL</a> (Vanadium Definition Language)
+<p>In the <a href="/vanadium-website/build/javascript/hellopeer.html">Hello Peer</a> tutorial, <a href="/glossary.html#vanadium-definition-language-vdl-">VDL</a> (Vanadium Definition Language)
 was not used.
 It is possible to communicate without VDL for simple applications, but
 it is strongly recommended to use VDL for cross-platform, cross-language,
@@ -198,7 +198,7 @@ In particular, a special representation is used for JavaScript values
 when VDL is not being used that may be incompatible with Go values.</p>
 <h3 id="fortune-vdl">Fortune VDL</h3>
 <p>We will reuse the same interface definition from the
-<a href="/tutorials/basics.html">Client/Server Basics tutorial</a>.
+<a href="/vanadium-website/build/basics.html">Client/Server Basics tutorial</a>.
 <code>$V_TUT/src/fortune/ifc/fortune.vdl</code> defines a fortune teller service, which
 allows clients to <code>Get</code> and <code>Add</code> fortunes. The relevant code is reproduced below:</p>
 <pre><code class="noclipboard">package fortune
@@ -301,7 +301,7 @@ function getDefaultServiceName(accountName) {
   return homeDir + &#39;/tutorial/fortune&#39;;
 }
 EOF
-</code></pre><p>The Fortune server works similarly to the one in the <a href="/tutorials/basics.html">Client/Server Basics tutorial</a>.
+</code></pre><p>The Fortune server works similarly to the one in the <a href="/vanadium-website/build/basics.html">Client/Server Basics tutorial</a>.
 The service implementation:</p>
 <ul>
 <li>Uses a VDL protocol to define the Fortune interface</li>
@@ -325,11 +325,11 @@ application in error messages.</p>
 <p>Similar parameters are typically specified through command line flags with Go.</p>
 <h3 id="serving-at-a-name">Serving at a name</h3>
 <p>The Fortune service was served using a Vanadium <a href="/glossary.html#object-name">name</a>. To learn more about names and name resolution, read
-the <a href="/concepts/naming.html">Naming Concepts</a> page or go through the <a href="/tutorials/naming/">Naming tutorial</a>.</p>
+the <a href="/concepts/naming.html">Naming Concepts</a> page or go through the <a href="/vanadium-website/build/naming/">Naming tutorial</a>.</p>
 <pre><code class="noclipboard">// Serve the service at a Vanadium name.
 server.serve(name, service, callback);</code></pre>
 
-<p>In the <a href="/tutorials/basics.html">Client/Server Basics tutorial</a>, the Fortune client connected to the server directly using
+<p>In the <a href="/vanadium-website/build/basics.html">Client/Server Basics tutorial</a>, the Fortune client connected to the server directly using
 a name rooted at its <a href="/glossary.html#endpoint">endpoint address</a>.
 In contrast, the server in this tutorial uses a name that does not include
 an endpoint address and is resolved against a mount table.</p>
@@ -604,7 +604,7 @@ TUT_PID_HTTPD=$!
 <p>For simplicity, this example uses the default authorizer. To pass
 the authorization check, it is possible to create a principal with
 the proper blessings for communication with the browser. To read more, go to
-the <a href="/concepts/security.html">Security Concepts</a> page or run through the <a href="/tutorials/security/principals-and-blessings.html">Principals and blessings</a> tutorial.</p>
+the <a href="/concepts/security.html">Security Concepts</a> page or run through the <a href="/vanadium-website/build/security/principals-and-blessings.html">Principals and blessings</a> tutorial.</p>
 <p>Use the <code>principal</code> tool, as follows:</p>
 <pre><code>$V_BIN/principal --v23.credentials $V_TUT/cred/basics \
   seekblessings
@@ -656,7 +656,7 @@ kill $TUT_PID_SERVER
 <p>You have:</p>
 <ul>
 <li>Built a fortune client and server in JavaScript. A hosted copy of the tutorial
-result can be accessed <a href="/tutorials/javascript/results/fortune.html">here</a>.</li>
+result can be accessed <a href="/vanadium-website/build/javascript/results/fortune.html">here</a>.</li>
 <li>Established communication between the JavaScript and Go clients and servers.</li>
 <li>Learned about using Vanadium in JavaScript as compared to Go.</li>
 </ul>

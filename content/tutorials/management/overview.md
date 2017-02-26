@@ -16,4 +16,4 @@ Vanadium application management.
 
   _Wherein_ you learn about running a server through the device manager.
 
-[__The Device Manager__]: /tutorials/management/device-manager.html
+[__The Device Manager__]: /vanadium-website/build/management/device-manager.html

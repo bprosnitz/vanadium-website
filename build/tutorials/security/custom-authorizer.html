@@ -180,8 +180,8 @@ and test it using some existing principals.</p>
 blessing <code>alice:friend:bob</code> and Carol to have the blessing
 <code>alice:family:sister</code>.</p>
 <h1 id="custom-authorization-policy">Custom authorization policy</h1>
-<p>If the <a href="/tutorials/security/permissions-authorizer.html">Permissions authorizer</a> and/or caveats (caveats
-are discussed <a href="/tutorials/security/first-party-caveats.html">later</a>) aren&#39;t sufficient for some purpose,
+<p>If the <a href="/vanadium-website/build/security/permissions-authorizer.html">Permissions authorizer</a> and/or caveats (caveats
+are discussed <a href="/vanadium-website/build/security/first-party-caveats.html">later</a>) aren&#39;t sufficient for some purpose,
 Vanadium applications can create their own arbitrarily complex policy by
 implementing the <a href="https://vanadium.googlesource.com/release.go.v23/+/master/security/model.go#465"><code>security.Authorizer</code></a> interface.</p>
 <p>For example, this policy:</p>
@@ -286,7 +286,7 @@ the time:</p>
 <pre><code>$V_TUT/bin/client \
     --v23.credentials $V_TUT/cred/carol \
     --server `cat $V_TUT/server.txt`
-</code></pre><p>Feel free to review Carol&#39;s status with the <a href="/tutorials/security/principals-and-blessings.html#principal-dump"><code>principal dump</code></a> command.</p>
+</code></pre><p>Feel free to review Carol&#39;s status with the <a href="/vanadium-website/build/security/principals-and-blessings.html#principal-dump"><code>principal dump</code></a> command.</p>
 <p><img src="/images/tut/security12-alice-carol-succeed.svg" alt="Carol&#39;s request to the server succeeds"></p>
 <p>We&#39;re done with the server for now.</p>
 <!-- @killServer @test -->

@@ -170,19 +170,19 @@ All tutorials require Vanadium <a href="/installation/">installation</a>, and mu
 
       <h1 id="introduction">Introduction</h1>
 <p>This tutorial focusses on using a mount table with the <em>fortune</em>
-server and client programs you made in the <a href="/tutorials/basics.html">basics tutorial</a>, and just
+server and client programs you made in the <a href="/vanadium-website/build/basics.html">basics tutorial</a>, and just
 re-made with the prerequisites script above.</p>
 <h2 id="credentials">Credentials</h2>
 <p>To keep security simple initially, all processes here will
-<a href="/tutorials/basics.html#authorization">use the same credentials</a>.  Further, credentials will be specified
+<a href="/vanadium-website/build/basics.html#authorization">use the same credentials</a>.  Further, credentials will be specified
 using this environment variable:</p>
 <!-- @setCredentials @test -->
 <pre><code>export V23_CREDENTIALS=$V_TUT/cred/basics
 </code></pre><p>Vanadium programs consult this environment variable when the
 credentials aren&#39;t specified by using the <code>--v23.credentials</code> flag,
-or by using a <a href="/tutorials/security/agent.html">security agent</a>.</p>
+or by using a <a href="/vanadium-website/build/security/agent.html">security agent</a>.</p>
 <h1 id="start-a-table">Start a table</h1>
-<p>When you ran the fortune server in the <a href="/tutorials/basics.html">basics tutorial</a>, you told it
+<p>When you ran the fortune server in the <a href="/vanadium-website/build/basics.html">basics tutorial</a>, you told it
 to write its network <a href="/glossary.html#endpoint">endpoint</a> to a file, then you told the client to
 read that file so it would know where to find the server.</p>
 <p>Let&#39;s do that again, but this time instead of using a file to hold the
@@ -194,7 +194,7 @@ endpoint, we&#39;ll use a server.</p>
 kill_tut_process TUT_PID_MT
 $V_BIN/mounttabled --v23.tcp.address :$PORT_MT &amp;
 TUT_PID_MT=$!
-</code></pre><p>A mount table happens to be a Vanadium service.  This means the <a href="/tutorials/basics.html#the-vrpc-client">vrpc</a>
+</code></pre><p>A mount table happens to be a Vanadium service.  This means the <a href="/vanadium-website/build/basics.html#the-vrpc-client">vrpc</a>
 program can report its <a href="https://vanadium.googlesource.com/release.go.v23/+/master/services/mounttable/service.vdl">VDL interface</a>:</p>
 <!-- @queryMountTable @test -->
 <pre><code>$V_BIN/vrpc signature /localhost:$PORT_MT
@@ -204,7 +204,7 @@ specified at startup, the Vanadium runtime consulted the environment
 variable <code>V23_CREDENTIALS</code> (set above) to get the credentials.</p>
 <p>Had credentials been left unspecified, randomly generated credentials
 would have been used, and the problems reviewed at the
-<a href="/tutorials/basics.html#authorization">end of the basics tutorial</a> would happen below
+<a href="/vanadium-website/build/basics.html#authorization">end of the basics tutorial</a> would happen below
 when processes start talking to each other.  Mount table security will
 be discussed in later tutorial.</p>
 <h1 id="the-namespace-client">The namespace client</h1>
@@ -253,7 +253,7 @@ about one hundred minutes.  That&#39;s what the <code>100m</code> meant in the
 <pre><code>cat $V_TUT/s1.txt
 </code></pre><h1 id="name-usage">Name usage</h1>
 <p>Recapping, here&#39;s how you connected the fortune client to the fortune
-server using a full service endpoint name in the <a href="/tutorials/basics.html">basics tutorial</a>:</p>
+server using a full service endpoint name in the <a href="/vanadium-website/build/basics.html">basics tutorial</a>:</p>
 <!-- @reviewFortune @test -->
 <pre><code>$V_TUT/bin/client --server `cat $V_TUT/s1.txt`
 </code></pre><p>Now you can use the name <code>fortuneAlpha</code> instead:</p>
@@ -294,7 +294,7 @@ mount table maintained by the v23 team.  Circa April 2015 the service
 runs at <code>ns.dev.v.io:8101</code>.  The port serves Vanadium protocol, not
 HTTP.</p>
 <p>The default behavior for unspecified credentials is to generate
-<a href="/tutorials/basics.html#authorization">random credentials</a>.</p>
+<a href="/vanadium-website/build/basics.html#authorization">random credentials</a>.</p>
 <h2 id="many-names-one-endpoint">Many names, one endpoint</h2>
 <p>A single service instance can have multiple names.  Mount the same
 service again, with the name <code>fortuneBeta</code>, and a brief time to live:</p>

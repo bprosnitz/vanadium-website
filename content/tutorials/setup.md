@@ -63,4 +63,4 @@ function kill_tut_process() {
 ```
 
 [installation]: /installation/
-[bash]: /tutorials/faq.html#why-bash-
+[bash]: /vanadium-website/build/faq.html#why-bash-
